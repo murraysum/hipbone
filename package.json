@@ -11,6 +11,8 @@
   "dependencies": {
     "pinia": "^2.1.7",
     "pinyin": "^4.0.0-alpha.0",
+    "primeflex": "^3.3.1",
+    "primevue": "^3.46.0",
     "segmentit": "^2.0.3",
     "v-clipboard": "^3.0.0-next.1",
     "vue": "^3.3.11",

@@ -1,12 +1,22 @@
 <template>
-  <div>
-    {{ translated }} <br />
-    {{ original }} <br />
-    <input type="text" v-model="original" @input="translate"/>
+  <div style="width: 500px;">
+    <h1>Translator</h1>
+    <Card class="mb-2">
+      <template #content>
+        <p class="m-0">
+          {{ translated }}
+        </p>
+        <p class="m-0">
+          {{ original }}
+        </p>
+      </template>
+    </Card>
 
-    <button @click.prevent="copyToClipboard">
-      Copy
-    </button>
+    <InputText type="text" v-model="original" placeholder="Type Chinese" @input="translate" class="w-full"/>
+
+    <div class="mt-2">
+      <Button @click.prevent="copyToClipboard" label="Copy" class="w-full" />
+    </div>
   </div>
 </template>
 
@@ -14,12 +24,22 @@
 
   import pinyin from "pinyin";
 
+  import Button from 'primevue/button';
+  import Card from 'primevue/card';
+  import InputText from 'primevue/inputtext';
+
   export default {
     data(){
       return {
         original: "",
         translated: null
       }
+    },
+
+    components: {
+      Button,
+      Card,
+      InputText
     },
 
     methods: {

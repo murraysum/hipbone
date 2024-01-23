@@ -3,7 +3,5 @@ import Translator from '../components/Translator.vue'
 </script>
 
 <template>
-  <main>
-    <Translator />
-  </main>
+  <Translator />
 </template>
